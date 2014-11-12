@@ -1,0 +1,249 @@
+@import "settings";
+@import "foundation";
+
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
+
+//write custom styles here
+
+//variables
+$Georgia: 'Georgia', georgia, serif;
+$Helvetica: 'Helvetica', helvetica, sans-serif;
+$red: #c54732;
+
+//general styles
+h2{
+  font-family: $Georgia;
+  font-weight: bolder;
+  font-size: 2em;
+}
+h3{
+  font-family: $Georgia;
+  font-style: italic;
+  color: $red;
+  font-size: 1em;
+  line-height: 1.5px;
+}
+h4{
+  font-family: $Helvetica;
+  text-align: left;
+  font-size: 1.1em;
+}
+.hideOnSmall{
+  @media (max-width: 675px) {
+    display: none;
+  }
+}
+
+//nested styles
+
+body{
+  background-color: #eae9e4;
+  .container{
+    border-top: 4px solid $red;
+    
+    .header{
+      span{
+        color: #8b8b8b;
+      }
+      ul{
+        list-style-type: none;
+        font-family: $Helvetica;
+        font-size: .8em;
+        text-align: center;
+        li{
+          display: inline-block;
+          margin: 15px;
+          @media (max-width: 675px) {
+            display: inline;
+          }
+          a{
+            color: #585858;
+          }
+          #loginLink{
+            color:$red;
+          }
+        }
+      }
+    }
+
+    .mainSlideArea{
+      text-align: center;
+      padding-bottom: 34px;
+      .banner{
+        text-align: right;
+        margin-right: -31px;
+        margin-top: -260px;
+      }
+      .underShirts{
+        text-align: right;
+        margin-right: 20px;
+        margin-top: -134px;
+        img{
+          border: 3px solid white;
+        }
+      }
+    }
+
+    .rideWith{
+      margin-bottom: 18px;
+      .rideWithImg{
+        border: 6px solid white;
+        margin-bottom: 16px;
+      }
+      .textLeft{
+        font-weight: bolder;
+        color: black;
+      }
+      .textRight{
+        color: $red;
+        font-weight: lighter;
+      }
+      span{
+        color: $red;
+        font-family: $Georgia;
+        font-style: italic;
+        font-size: 2.4em;
+      }
+      p{
+        font-size: .8em;
+      }
+      a{
+        color: $red;
+      }
+    }
+
+    .bannerAds{
+      h4{
+        font-weight: bold;
+      }
+      p{
+        font-family: $Helvetica;
+        font-weight: lighter;
+        font-size: .9em;
+      }
+      .email{
+        background-color: #b13824;
+        height: 200px;
+        #emailNewsletter{
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-size: 1em;
+        }
+        .emailText{
+          font-family: $Georgia;
+          font-style: italic;
+          font-weight: lighter;
+          color: white;
+          padding-left: 20px;
+          padding-right: 20px;
+          font-size: .8em;
+        }
+        ul{
+          list-style-type: none;
+          li{
+            display: inline-block;
+          }
+        }
+      }
+      a{
+        color: $red;
+      }
+    }
+    
+    footer{
+      background-color: #454040;
+      .footerHeads{
+        color: $red;
+        font-weight: bolder;
+      }
+      .footerLinks{
+        color: white;
+        font-family: $Helvetica;
+        font-weight: lighter;
+      }
+      p{
+        font-size: .8em;
+        color: black;
+        padding-top: 10px;
+        margin-bottom: 0px;
+      }
+      ul{
+        margin-top: 25px;
+        list-style-type: none;
+        font-size: .8em;
+        li{
+          color: white;
+          padding-top: 15px;
+        }
+      }
+      .retailBox{
+        background-color: #b5b3ab;
+        padding: 10px;
+        margin-top: 15px;
+        width: 240px;
+        height: 100px;
+        text-align: left;
+        input{
+          width: 110px;
+          height: 28px;
+        }
+        .zipCode{
+          list-style-type: none;
+          margin: 0px;
+          li{
+            display: inline-block;
+            padding: 0px;
+          }
+        }
+      }
+      .contact{
+        margin-bottom: 0px;
+      }
+      .contactInfo{
+        line-height: 6px;
+        margin-top: 0px;
+        #contactEmail{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
